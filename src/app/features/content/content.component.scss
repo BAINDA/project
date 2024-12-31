@@ -5,7 +5,10 @@
   padding-top: 60px;
 
   h2 {
-    padding-left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
   }
 
   @media (max-width: $breakpoint-xs) {
@@ -31,15 +34,11 @@
     }
 
     @media (max-width: $breakpoint-md) {
-      width: 55%;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      width: 60%;
+      width: 70%;
     }
 
     @media (max-width: $breakpoint-xs) {
-      width: 35%;
+      width: 80%;
     }
   }
 
@@ -56,12 +55,8 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    @media (max-width: $breakpoint-sm) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     @media (max-width: $breakpoint-xs) {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 }

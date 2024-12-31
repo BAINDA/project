@@ -1,7 +1,7 @@
 <main class="contents container">
-  <h2>All {{ contentType | titlecase }}</h2>
-
   <div class="contents__container">
+    <h2>All {{ contentType | titlecase }}</h2>
+
     <div class="contents__right-side">
       <div class="contents__list">
         @for (content of nowPlaying; track content) {
