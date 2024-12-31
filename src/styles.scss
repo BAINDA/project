@@ -156,3 +156,21 @@ a {
     padding-left: 15px;
   }
 }
+
+// Custom scrollbar styles
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $grey-900;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $grey-800;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  &:hover {
+    background: $grey-700;
+  }
+}
