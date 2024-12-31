@@ -1,0 +1,48 @@
+$header-height: 3.5rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.813rem;
+$smaller-font-size: 0.75rem;
+
+/*========== Font weight ==========*/
+$font-medium: 500;
+$font-semi-bold: 600;
+
+/*========== Margins Bottom ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+$mb-0-25: 0.25rem;
+$mb-0-5: 0.5rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+$z-fixed: 10;
+
+// media queries
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+// Colors
+
+$grey-900: hsla(224, 39%, 11.6%, 1);
+$grey-800: hsla(224, 31.9%, 18.4%, 1);
+$grey-700: hsla(224, 25.4%, 26.3%, 1);
+$app-primary: #5a4af4;
+$app-text-grey: #5f687d;
+
+// Mixin for media-query
+@mixin media-query($min, $max: null) {
+  @if $max == null {
+    @media (max-width: $min) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}

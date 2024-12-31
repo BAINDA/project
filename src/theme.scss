@@ -1,0 +1,102 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$app-primary: #5a4af4;
+
+@mixin palette($theme) {
+  $primary-color: mat.get-theme-color($theme, primary, 50);
+  ::selection {
+    background-color: $app-primary;
+  }
+  .colored-hover:hover {
+    color: $app-primary;
+  }
+  swiper-container::part(bullet-active) {
+    background-color: $app-primary;
+  }
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled)
+    .mdc-tab-indicator__content--underline,
+  .mat-mdc-tab.mdc-tab--active:hover .mdc-tab-indicator__content--underline {
+    border-color: $app-primary !important;
+  }
+  .mat-mdc-unelevated-button:not(:disabled) {
+    background-color: $app-primary !important;
+  }
+  .activated-route {
+    border-color: $app-primary !important;
+  }
+}
+
+$theme-primary: mat.$red-palette;
+
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: $theme-primary,
+    ),
+  )
+);
+
+@include palette($theme);
+:root {
+  @include mat.all-component-themes($theme);
+}
+
+.blue-theme {
+  $theme: mat.define-theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$blue-palette,
+      ),
+    )
+  );
+  @include palette($theme);
+  @include mat.all-component-colors($theme);
+}
+
+.green-theme {
+  $theme: mat.define-theme(
+    (
+      color: (
+        theme-type: dark,
+        primary: mat.$green-palette,
+      ),
+    )
+  );
+  @include palette($theme);
+  @include mat.all-component-colors($theme);
+}
+
+// Dialogo
+
+.dialog-title-container {
+  cursor: move;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  a {
+    float: right;
+    color: white;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mdc-dialog-container {
+  padding: 0 !important;
+}
+
+.mdc-dialog__content {
+  padding: 0 !important;
+  margin: 0 !important;
+}

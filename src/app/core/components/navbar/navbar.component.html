@@ -1,0 +1,31 @@
+<header class="navbar__container">
+  <nav class="navbar__nav container">
+    <a [routerLink]="'/'" class="flex-start navbar__logo">
+      <img [src]="'assets/img/logo.png'" alt="Logo" />
+    </a>
+    <div class="navbar__list">
+      <a
+        mat-button
+        [routerLink]="''"
+        [routerLinkActive]="['activated-route']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        aria-label="Home"
+        >Home</a
+      >
+      <a
+        mat-button
+        [routerLink]="'movies'"
+        [routerLinkActive]="['activated-route']"
+        aria-label="Movies"
+        >Movies</a
+      >
+      <a
+        mat-button
+        [routerLink]="'tv-shows'"
+        [routerLinkActive]="['activated-route']"
+        aria-label="TV Shows"
+        >TV Shows</a
+      >
+    </div>
+  </nav>
+</header>

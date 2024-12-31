@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+    <base href="/" />
+
+    <meta name="theme-color" content="#5a4af4" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- facebook and other social sites -->
+    <meta property="og:type" content="movies and Series" />
+    <meta property="og:site_name" content="AngularMovies" />
+    <meta property="og:title" content="Home Page" />
+    <meta
+      property="og:description"
+      content="Angular Movies and Series description works fine"
+    />
+    <!-- <meta
+      property="og:image"
+      content="https://image.tmdb.org/t/p/w1920/5wNUJs23rT5rTBacNyf5h83AynM.jpg"
+    /> -->
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+  </head>
+  <body>
+    <app-home>
+      <div class="cssloader">
+        <div class="sh1"></div>
+        <div class="sh2"></div>
+        <h4 class="lt">loading</h4>
+      </div>
+    </app-home>
+
+    <noscript>
+      <h3 style="color: #f44336; margin: 2rem">
+        Sorry, but app is not available without javascript
+      </h3>
+    </noscript>
+  </body>
+</html>

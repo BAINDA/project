@@ -1,0 +1,72 @@
+@import "./../../../styles/variables.scss";
+.navbar__container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  z-index: 100;
+}
+.navbar__nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.navbar__logo {
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @media (max-width: $breakpoint-xs) {
+    gap: 4px;
+  }
+
+  a {
+    list-style: none;
+    color: $app-text-grey;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    // first child hidden on mobile
+    &:first-child {
+      @media (max-width: $breakpoint-xs) {
+        display: none;
+      }
+    }
+  }
+
+  .activated-route {
+    border-bottom: 2px solid;
+    border-radius: 0;
+    color: $app-primary;
+
+    &:last-child {
+      margin-right: 15px;
+    }
+  }
+}
