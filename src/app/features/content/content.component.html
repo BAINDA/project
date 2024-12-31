@@ -12,12 +12,22 @@
         }
       </div>
 
-      <!-- <mat-paginator
-        [length]="totalResults"
-        [pageSize]="20"
-        (page)="changePage($event)"
-      >
-      </mat-paginator> -->
+      <div class="pagination">
+        <!-- Previous Button -->
+        <button class="button previous" (click)="previousPage()">
+          Previous
+        </button>
+
+        <!-- Page Numbers -->
+        <span class="page-numbers">
+          <span *ngFor="let page of pageNumbers" (click)="changePage(page)">
+            {{ page }}
+          </span>
+        </span>
+
+        <!-- Next Button -->
+        <button class="button next" (click)="nextPage()">Next</button>
+      </div>
     </div>
   </div>
 </main>
