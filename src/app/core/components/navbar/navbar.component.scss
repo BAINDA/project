@@ -8,13 +8,18 @@
   left: 0;
   transition: 0.4s;
   z-index: 100;
+  padding: 0 20px;
 }
 .navbar__nav {
   height: $header-height;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 30px;
+
+  @media (max-width: $breakpoint-xs) {
+    padding: 0 20px;
+  }
 
   img {
     width: 40px;
@@ -38,7 +43,7 @@
   gap: 16px;
 
   @media (max-width: $breakpoint-xs) {
-    gap: 4px;
+    gap: 10px;
   }
 
   a {

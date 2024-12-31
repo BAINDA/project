@@ -1,9 +1,12 @@
-<!--Desktop Navbar-->
-<app-navbar></app-navbar>
+<div>
+  <!--Desktop Navbar-->
+  <app-navbar></app-navbar>
 
-<!--Main Routing-->
+  <!--Main Routing-->
+  <main role="main" style="min-height: 100vh; margin-top: 100px">
+    <router-outlet></router-outlet>
+  </main>
 
-<router-outlet></router-outlet>
-
-<!-- Footer Component -->
-<app-footer></app-footer>
+  <!-- Footer Component -->
+  <app-footer></app-footer>
+</div>
